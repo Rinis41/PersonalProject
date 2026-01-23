@@ -1,0 +1,30 @@
+.featured-properties {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.featured-property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.featured-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: .75rem;
+  border-radius: 6px;
+}
+.featured-info {
+  display: flex;
+  flex-direction: column;
+}
+.featured-info a {
+  font-weight: bold;
+  color: #0a4b78;
+  text-decoration: none;
+}
+.featured-price {
+  color: #444;
+  font-size: .9rem;
+}
