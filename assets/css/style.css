@@ -28,3 +28,28 @@
   color: #444;
   font-size: .9rem;
 }
+
+/* Basic layout and header styles */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+.site-header { background: #fff; border-bottom: 1px solid #e6e6e6; }
+.site-header .container { display:flex; align-items:center; gap:1rem; }
+.logo { flex:1; }
+.primary-nav { flex:2; }
+.primary-nav .menu { list-style:none; margin:0; padding:0; display:flex; gap:1rem; }
+.primary-nav .menu li { display:inline-block; }
+.menu-toggle { display:none; background:transparent; border:0; font-size:1.25rem; }
+.is-sticky.site-header { position:sticky; top:0; z-index:50; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+
+/* Grid for archive and index */
+.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1rem; }
+.card { background:#fff; border:1px solid #eee; padding:1rem; border-radius:6px; }
+
+/* Pagination */
+.nav-links { display:flex; gap:.5rem; list-style:none; padding:0; }
+
+/* Responsive */
+@media (max-width: 800px) {
+  .primary-nav { display:none; }
+  .menu-toggle { display:inline-block; }
+  .primary-nav.open { display:block; position:absolute; left:0; right:0; top:60px; background:#fff; padding:1rem; border-bottom:1px solid #ddd; }
+}

@@ -15,7 +15,11 @@
       <?php } ?>
       <p class="meta"><?php bloginfo('description'); ?></p>
     </div>
-    <nav class="primary-nav">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">
+      <span class="menu-icon">☰</span>
+      <span class="screen-reader-text"><?php _e('Menu', 'realestate-advanced'); ?></span>
+    </button>
+    <nav id="primary-menu" class="primary-nav" role="navigation">
       <?php wp_nav_menu(['theme_location' => 'primary', 'container' => false, 'menu_class' => 'menu']); ?>
     </nav>
     <div class="header-search">
