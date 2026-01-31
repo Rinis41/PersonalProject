@@ -19,7 +19,7 @@
     </div>
     
     <nav class="aura-nav">
-      <a href="<?php echo get_post_type_archive_link('post'); ?>" class="aura-nav-link">Posts</a>
+      <a href="<?php echo esc_url(home_url('/blog')); ?>" class="aura-nav-link">Posts</a>
       <a href="#features" class="aura-nav-link">Features</a>
       <a href="#pricing" class="aura-nav-link">Pricing</a>
       <a href="#contact" class="aura-nav-link">Contact</a>
