@@ -19,10 +19,18 @@
     </div>
     
     <nav class="aura-nav">
-      <a href="<?php echo esc_url(home_url('/blog')); ?>" class="aura-nav-link">Posts</a>
-      <a href="#features" class="aura-nav-link">Features</a>
-      <a href="#pricing" class="aura-nav-link">Pricing</a>
-      <a href="#contact" class="aura-nav-link">Contact</a>
+      <?php
+      $pages = get_pages(array(
+        'number' => -1,
+        'post_status' => 'publish'
+      ));
+      
+      if($pages) {
+        foreach($pages as $page) {
+          echo '<a href="' . esc_url(get_page_link($page->ID)) . '" class="aura-nav-link">' . esc_html($page->post_title) . '</a>';
+        }
+      }
+      ?>
     </nav>
     
     <button class="aura-btn aura-btn-cta">Start Free Trial</button>
