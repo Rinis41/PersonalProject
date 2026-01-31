@@ -10,13 +10,13 @@
 <body <?php body_class(); ?>>
 <header class="site-header aura-header">
   <div class="container aura-header-container">
-    <div class="aura-logo-section">
+    <a href="<?php echo esc_url(home_url('/')); ?>" class="aura-logo-section">
       <svg class="aura-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="10" stroke="#17a2b8" stroke-width="2"/>
         <path d="M12 2v20M2 12h20" stroke="#17a2b8" stroke-width="2"/>
       </svg>
       <span class="aura-logo-text">AuraFlow</span>
-    </div>
+    </a>
     
     <nav class="aura-nav">
       <?php
