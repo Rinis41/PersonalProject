@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <header class="archive-header">
   <h1><?php the_archive_title(); ?></h1>
   <?php the_archive_description('<div class="meta">','</div>'); ?>
@@ -16,12 +17,15 @@
   <?php endif; endif; ?>
 
 <?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('template-parts/content', get_post_format()); ?>
-  <?php endwhile; ?>
+  <div class="grid posts-grid">
+    <?php while (have_posts()) : the_post(); ?>
+      <?php get_template_part('template-parts/content', get_post_format()); ?>
+    <?php endwhile; ?>
+  </div>
   <?php rea_pagination(); ?>
 <?php else : ?>
   <p><?php _e('Nothing here yet.', 'realestate-advanced'); ?></p>
 <?php endif; ?>
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
