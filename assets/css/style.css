@@ -105,11 +105,12 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: color var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .aura-nav-link:hover {
-  color: var(--color-primary);
+  color: #000;
+  opacity: 0.7;
 }
 
 /* ====== BUTTONS ====== */
