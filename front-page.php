@@ -120,4 +120,30 @@
   </div>
 </section>
 
+<!-- ====== LATEST POSTS SECTION ====== -->
+<section class="aura-features" style="background:#f9f9f9; padding-top: 3rem;">
+  <div class="container">
+    <h2 class="aura-section-title">Latest News</h2>
+    
+    <div class="grid">
+      <?php
+$latest_posts = new WP_Query(array(
+  'post_type' => 'post',
+  'posts_per_page' => 3
+));
+
+if ($latest_posts->have_posts()):
+  while ($latest_posts->have_posts()):
+    $latest_posts->the_post();
+    get_template_part('template-parts/content');
+  endwhile;
+  wp_reset_postdata();
+else:
+  echo '<p style="text-align:center; grid-column: 1/-1;">No posts found. Create your first post in the dashboard!</p>';
+endif;
+?>
+    </div>
+  </div>
+</section>
+
 <?php get_footer(); ?>

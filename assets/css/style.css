@@ -1,4 +1,4 @@
-:root{
+:root {
   --color-primary: #17a2b8;
   --color-primary-light: #e0f7f4;
   --color-bg: #ffffff;
@@ -25,7 +25,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -358,7 +359,7 @@ body {
   .aura-hero-title {
     font-size: 2.25rem;
   }
-  
+
   .aura-hero-content {
     gap: 2rem;
   }
@@ -368,47 +369,117 @@ body {
   .aura-header-container {
     gap: 1rem;
   }
-  
+
   .aura-nav {
     display: none;
   }
-  
+
   .aura-hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .aura-hero-title {
     font-size: 1.75rem;
   }
-  
+
   .aura-hero-right {
     transform: scale(0.8);
   }
-  
+
   .aura-section-title {
     font-size: 1.75rem;
   }
-  
+
   .aura-features-grid {
     gap: 1.5rem;
   }
-  
+
   .aura-btn-large {
     width: 100%;
   }
 }
 
 /* Grid for archive and index */
-.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1rem; }
-.card { background:#fff; border:1px solid #eee; padding:1rem; border-radius:6px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  /* Ensure image stays inside */
+}
+
+/* Post Card Specifics */
+.post-card {
+  padding: 0;
+  /* Remove padding from card container so image is flush */
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card .card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card .card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card .entry-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.post-card .entry-title a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.post-card .entry-title a:hover {
+  color: var(--color-primary);
+}
 
 /* Pagination */
-.nav-links { display:flex; gap:.5rem; list-style:none; padding:0; }
+.nav-links {
+  display: flex;
+  gap: .5rem;
+  list-style: none;
+  padding: 0;
+}
 
 /* Responsive */
 @media (max-width: 800px) {
-  .primary-nav { display:none; }
-  .menu-toggle { display:inline-block; }
-  .primary-nav.open { display:block; position:absolute; left:0; right:0; top:60px; background:#fff; padding:1rem; border-bottom:1px solid #ddd; }
+  .primary-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .primary-nav.open {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    background: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
 }

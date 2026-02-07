@@ -20,17 +20,17 @@
     
     <nav class="aura-nav">
       <?php
-      $pages = get_pages(array(
-        'number' => -1,
-        'post_status' => 'publish'
-      ));
-      
-      if($pages) {
-        foreach($pages as $page) {
-          echo '<a href="' . esc_url(get_page_link($page->ID)) . '" class="aura-nav-link">' . esc_html($page->post_title) . '</a>';
-        }
-      }
-      ?>
+$pages = get_pages(array(
+  'number' => -1,
+  'post_status' => 'publish'
+));
+
+if ($pages) {
+  foreach ($pages as $page) {
+    echo '<a href="' . esc_url(get_page_link($page->ID)) . '" class="aura-nav-link">' . esc_html($page->post_title) . '</a>';
+  }
+}
+?>
     </nav>
     
     <button class="aura-btn aura-btn-cta">Start Free Trial</button>
